@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>about | Besamjes</title>
-        <!-- 添加 favicon -->
-        <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-        <!-- 引入自定义字体 -->
-        <style>
-            @font-face {
-                font-family: 'Trap-Regular';
-                src: url('assets/fonts/Trap-Regular.woff') format('woff');
-            }
-            .textbox {
-            position: absolute;
-            bottom: 00px; /* 与容器底部的间距 */
-            left: 00px;  /* 与容器左侧的间距 */
-            width: calc(100% - 40px); /* 保持左右间距一致 */
-            color: #333;
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 30px;
-            line-height: 1.6;
-        }
-        </style>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-            
-    <!-- 公共部分将加载到这里 -->
-    <div id="common-header"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="/css/styles.css"> <!-- 引用外部样式文件 -->
 
-        <div class="container">
+</head>
+<body>
+      <!-- 公共部分将加载到这里 -->
+      <div id="common-header"></div>
 
-                <div class="textbox">
-                    <p>After building my skills through different experiences in the cultural field, I have started working as a freelancer. I have a particular interest for type design, 3D & brand identity. I’m always looking for new challenges and I truly believe that nowadays design has to be seen through an holistic perspective. This ideology has brought me to push my limits and learn new skills to bridge various mediums into my daily routine.</p>
-                    <p>I tend to develop an approach that is both artistic and narrative while expanding my interest in the borders that separate reality from the virtual world. As a multidisciplinary designer, I shift between non-directive artistic projects and more conventional corporate projects.</p>
-                    <br>
-                    <p>通过在文化领域的不同经历培养了我的技能后，我开始从事自由职业。我对字体设计、3D和品牌标识特别感兴趣。我一直在寻找新的挑战，我真的相信现在的设计必须从整体的角度来看待。这种意识形态让我突破了自己的极限，学会了将各种媒介融入日常生活的新技能。</p>
-                    <p>我倾向于发展一种既有艺术性又有叙事性的方法，同时扩大我对将现实与虚拟世界区分开来的边界的兴趣。作为一名多学科的设计师，我在非指导性的艺术项目和更传统的企业项目之间转换。</p>
-                </div>
-            </div>
-         
-            
-        </div>
-    
-        <script src="js/script.js"></script>
-        <script>
-            // 动态加载 header.html 内容
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('common-header').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        </script>
-    </body>
-    </html>
+      <!-- 页面主体内容 -->
+      <div class="content content-cn" lang="zh-CN">
+        通过在文化领域的不同经历培养了我的技能后，我开始从事自由职业。
+        <p>我对字体设计、3D和品牌标识特别感兴趣。我一直在寻找新的挑战，我真的相信现在的设计必须从整体的角度来看待。</p>
+        这种意识形态让我突破了自己的极限，学会了将各种媒介融入日常生活的新技能。
+        <p>我倾向于发展一种既有艺术性又有叙事性的方法，同时扩大我对将现实与虚拟世界区分开来的边界的兴趣。</p>
+        作为一名多学科的设计师，我在非指导性的艺术项目和更传统的企业项目之间转换。
+     </div>
+      <div class="content content-en" lang="en">
+        <p>After building my skills through different experiences in the cultural field, I have started working as a freelancer.</p>
+        I have a particular interest for type design, 3D & brand identity. I’m always looking for new challenges and I truly believe that nowadays design has to be seen through an holistic perspective.
+        <p>This ideology has brought me to push my limits and learn new skills to bridge various mediums into my daily routine.</p>
+        I tend to develop an approach that is both artistic and narrative while expanding my interest in the borders that separate reality from the virtual world.
+        <p>As a multidisciplinary designer, I shift between non-directive artistic projects and more conventional corporate projects.
+       </div>
+    </div>
+
+</body>
+
+<script>
+  // 动态加载 header.html 内容
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('common-header').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+</html>
+ 
