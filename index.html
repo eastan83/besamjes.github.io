@@ -1,122 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Besamjes▲编三绝</title>
-        <!-- 添加 favicon -->
-        <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-    <!-- 引入自定义字体 -->
-    <style>
-        @font-face {
-            font-family: 'Trap-Regular';
-            src: url('assets/fonts/Trap-Regular.woff') format('woff');
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BesamjesDesign</title>
+  <link rel="stylesheet" href="/css/styles.css"> <!-- 引用外部样式文件 -->
 </head>
 <body>
-    
-    <!-- 公共部分将加载到这里 -->
-    <div id="common-header"></div>
+      <!-- 公共部分将加载到这里 -->
+      <div id="common-header"></div>
 
-    <div class="container">
+      <!-- 瀑布流布局 -->
+     <div class="masonry">
+    <div class="item"><img src="images/-1-03.webp" alt="Image 1"></div>
+    <div class="item"><img src="images/-19.webp" alt="Image 2"></div>
+    <div class="item"><img src="images/-1_.webp" alt="Image 3"></div>
+    <div class="item"><img src="images/-1_1.webp" alt="Image 4"></div>
+    <div class="item"><img src="images/20.webp" alt="Image 5"></div>
+    <div class="item"><img src="images/21-6-5_.webp" alt="Image 6"></div>
+  </div>
 
-        <!-- 图片瀑布流部分 -->
-        <div class="image-gallery">
-            <div class="image-item">
-                <img src="images/zaijain.webp" alt="Logo" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/jianpan3.webp" alt="Logo" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/jianpan2.webp" alt="Logo" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/jianpan1.webp" alt="Logo" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/logo.png" alt="Logo" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/Besamjes.webp" alt="Logo" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/[20-3-21]-.webp" alt="Image 1" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/9.webp" alt="Image 6" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/zy1.webp" alt="Image 7" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/BAGS-1.webp" alt="Image 7" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/BAGS.webp" alt="Image 7" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/-1-03.webp" alt="Image 7" class="clickable-image">
-            </div>
-            <!-- 视频项 -->
-            <div class="image-item">
-                <video controls class="clickable-video">
-                <source src="assets/videos/aces_1.0_0000.mp4" type="video/mp4">
-                 您的浏览器不支持 video 标签。
-                </video>
-            </div>
-            <!-- 视频项 -->
-            <div class="image-item">
-                <video controls class="clickable-video">
-                <source src="assets/videos/aces_1.0.mp4" type="video/mp4">
-                 您的浏览器不支持 video 标签。
-                </video>
-            </div>
-            <div class="image-item">
-                <img src="images/20.webp" alt="Image 7" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/-19.webp" alt="Image 3" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/[21-6-29]-.webp" alt="Image 4" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/21-6-5_.webp" alt="Image 2" class="clickable-image">
-            </div>
-            <!-- 视频项 -->
-            <div class="image-item">
-                <video controls class="clickable-video">
-                <source src="assets/videos/[21-4-6]-_20241209213147.mp4" type="video/mp4">
-                 您的浏览器不支持 video 标签。
-                </video>
-            </div>
-            <div class="image-item">
-                <img src="images/7.webp" alt="Image 8" class="clickable-image">
-            </div>
-            <div class="image-item">
-                <img src="images/[20-9-26]-SADT(2).gif" alt="Image 8" class="clickable-image">
-            </div>
-        </div>
-
-        <!-- 大图显示区域（默认隐藏） -->
-        <div id="image-modal" class="modal">
-            <span id="close-modal" class="close">&times;</span>
-            <img id="modal-image" class="modal-content" src="">
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
-    <script>
-        // 动态加载 header.html 内容
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('common-header').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    </script>
+  <script>
+    // 动态加载 header.html 内容
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('common-header').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
 </body>
 </html>
