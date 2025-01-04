@@ -1,25 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel');
-    const images = carousel.querySelectorAll('img');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    let currentIndex = 0;
+let currentIndex = 0;
 
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
-        });
-    }
+function showSlide(index) {
+  const slides = document.querySelectorAll('.carousel-inner img, .carousel-inner video');
+  if (index >= slides.length) currentIndex = 0;
+  if (index < 0) currentIndex = slides.length - 1;
+  const offset = -currentIndex * 100;
+  document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+}
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    });
+function nextSlide() {
+  currentIndex++;
+  showSlide(currentIndex);
+}
 
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    });
-
-    showImage(currentIndex);
-});
+function prevSlide() {
+  currentIndex--;
+  showSlide(currentIndex);
+}
