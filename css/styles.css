@@ -25,7 +25,10 @@ body {
 
 /* 通用内容样式 */
 .content {
-  padding: 10px;
+  padding-top: 50px;
+  padding-left: 10px; /* 左侧内边距 */
+  padding-right: 10px; /* 右侧内边距 */
+  padding-bottom: 0px;
   max-width: 2150px;
   margin: 0 ;
   line-height: 1.8;
@@ -69,16 +72,14 @@ body {
   color: inherit;
 }
 
-.no-underline.active {
-  color: gray; /* 将颜色设置为灰色 */
-  pointer-events: none; /* 禁用点击事件 */
-}
-
 /* 瀑布流布局 */
 .masonry {
   column-count: 3;
   column-gap: 0.4rem;
-  padding: 0.4rem;
+  padding-top: 50px;
+  padding-left: 10px; /* 左侧内边距 */
+  padding-right: 10px; /* 右侧内边距 */
+  padding-bottom: 0px;
 }
 
 .item {
@@ -112,9 +113,10 @@ body {
 .parent-container {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 5px; /* 左侧内边距 */
-  padding-right: 5px; /* 右侧内边距 */
-  gap: 0px; /* 添加行距和列距 */
+  padding-top: 50px;
+  padding-left: 10px; /* 左侧内边距 */
+  padding-right: 10px; /* 右侧内边距 */
+  padding-bottom: 0px;
 }
 
 .container {
@@ -123,12 +125,26 @@ body {
   padding: 0px; /* 可选：添加内边距 */
   background-color: #f5f5f5; /* 添加背景颜色 */
   font-size: clamp(2rem, 3vw, 10rem);
-  
+  line-height: 1.2;
+  margin-top: 5px; /* 添加顶部边距 */
 }
 
-/* 确保容器之间没有间隔 */
-.parent-container .container {
-  margin: 0;
+.content-description {
+  width: 0.1%; /* 设置你需要的宽度 */
+}
+
+/* 内容4容器 */
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 内容4容器属性 */
+.content-box {
+  width: 100%; /* 设置容器的宽度，可以根据需要调整 */
+  padding:0px 10px 0px 0px;
+  box-sizing: border-box;
 }
 
 /* 合并内容5和内容6 */
@@ -136,56 +152,49 @@ body {
   flex: 1 1 66.66%; /* 占据两列 */
   background-color: #000000; /* 可选：不同的背景颜色 */
   position: relative;
-  height: 1200px; /* 固定高度 */
+  height: 20em; /* 固定高度 */
   overflow: hidden; /* 隐藏溢出内容 */
 }
 
-/* 轮播容器样式 */
 .carousel {
   position: relative;
-  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  height: 100%; /* 确保高度为100% */
+}
+
+.carousel-inner {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: transform 0.5s ease;
+  width: 100%; /* 确保内部容器宽度为100% */
+  height: 100%; /* 确保内部容器高度为100% */
 }
 
-/* 轮播图片样式 */
-.carousel img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* 图片按比例自适应高度 */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+.carousel-inner img, .carousel-inner video {
+  flex: 0 0 100%; /* 每个子元素占据100%的宽度 */
+  width: 100%; /* 确保宽度为100% */
+  height: 100%; /* 确保高度为100% */
+  object-fit: contain; /* 保持比例并自适应高度 */
+  box-sizing: border-box;
 }
 
-/* 当前显示的图片样式 */
-.carousel img.active {
-  opacity: 1;
-}
-
-/* 轮播按钮样式 */
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 1; /* 确保按钮在图片上方 */
+  z-index: 1;
 }
 
-/* 上一张按钮位置 */
-.prev-button {
+.carousel-button.prev-button {
   left: 10px;
 }
 
-/* 下一张按钮位置 */
-.next-button {
+.carousel-button.next-button {
   right: 10px;
 }
 
@@ -196,6 +205,6 @@ body {
   }
 
   .container-merged {
-    height: 600px; /* 小屏幕时的高度 */
+    height: 400px; /* 小屏幕时的高度 */
   }
 }
