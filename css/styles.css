@@ -14,7 +14,7 @@
   unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF;/* 中文字符和部分标点范围 */
 }
 
-/* 通用样式 */
+/* 通用样式body1 */
 body {
   font-family: "Trap-Regular", "PLIX-REGULAR", sans-serif;
   margin: 0;
@@ -49,66 +49,6 @@ body {
   line-height: 1.2;
 }
 
-/* 顶部公共文本样式 */
-.header {
-  color: #000000;
-  padding: 0.4rem;
-  text-align: left;
-  font-size: clamp(2rem, 5vw, 10ch); /* 响应式字体大小 */
-  line-height: 1.1;
-}
-
-.header a {
-  color: inherit;
-  text-decoration: none;
-  margin-right: 10;
-}
-
-.header a:hover {
-  text-decoration: underline;
-}
-
-.header span {
-  color: inherit;
-}
-
-/* 瀑布流布局 */
-.masonry {
-  column-count: 3;
-  column-gap: 0.4rem;
-  padding-top: 50px;
-  padding-left: 10px; /* 左侧内边距 */
-  padding-right: 10px; /* 右侧内边距 */
-  padding-bottom: 0px;
-}
-
-.item {
-  break-inside: avoid;
-  margin-bottom: 0.4rem;
-  background-color: #fff;
-  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.1);
-  border-radius: 0px;
-  overflow: hidden;
-}
-
-.item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0px;
-}
-
-/* 小屏幕下的响应式设置 */
-@media (max-width: 768px) {
-  .masonry {
-    column-count: 2;
-  }
-
-  .header {
-    font-size: clamp(3rem, 3vw, 1.5rem);
-  }
-}
-
 /* work.html */
 .parent-container {
   display: flex;
@@ -124,7 +64,7 @@ body {
   box-sizing: border-box; /* 包括内边距和边框在内的宽度计算 */
   padding: 0px; /* 可选：添加内边距 */
   background-color: #f5f5f5; /* 添加背景颜色 */
-  font-size: clamp(2rem, 3vw, 10rem);
+  font-size: clamp(1.5rem, 3vw, 10rem);
   line-height: 1.2;
   margin-top: 5px; /* 添加顶部边距 */
 }
@@ -178,30 +118,37 @@ body {
   box-sizing: border-box;
 }
 
-.carousel-button {
+.carousel-inner img:first-child, .carousel-inner video:first-child {
+  display: block; /* 显示第一个媒体元素 */
+}
+
+.carousel-nav {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
+  top: 0;
+  bottom: 0;
+  width: 50%;
   cursor: pointer;
-  z-index: 1;
 }
 
-.carousel-button.prev-button {
-  left: 10px;
+.left-nav {
+  left: 0;
+  cursor: url('/path/to/left-arrow.png'), auto; /* 替换为左箭头图标的路径 */
 }
 
-.carousel-button.next-button {
-  right: 10px;
+.right-nav {
+  right: 0;
+  cursor: url('/path/to/right-arrow.png'), auto; /* 替换为右箭头图标的路径 */
 }
-
 /* 小屏幕下的响应式设置 */
 @media (max-width: 768px) {
+  .parent-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .container, .container-merged {
-    flex: 1 1 100%; /* 占据100%宽度，按顺序排列 */
+    flex: 1 1 50%; /* 每个容器占据50%的宽度 */
+    box-sizing: border-box;
   }
 
   .container-merged {
