@@ -37,7 +37,7 @@ body {
 /* 针对英文字体的样式 */
 .content-en {
   font-family: 'Trap-Regular', sans-serif;
-  font-size: clamp(20px, 3vw, 6ch); /* 响应式字体大小 */
+  font-size: clamp(25px, 3vw, 6ch); /* 响应式字体大小 */
   letter-spacing: 0.5px;
   line-height: 1.1;
 }
@@ -45,7 +45,7 @@ body {
 /* 针对中文字体的样式 */
 .content-cn {
   font-family: 'PLIX-REGULAR', sans-serif;
-  font-size: clamp(20px, 3vw, 6ch); /* 响应式字体大小 */
+  font-size: clamp(25px, 3vw, 6ch); /* 响应式字体大小 */
   line-height: 1.2;
 }
 
