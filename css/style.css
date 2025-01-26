@@ -115,3 +115,10 @@ ul {
   .content {
     padding:10px;
   }
+
+  /* 确保视频自适应宽度 */
+.video-container video {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* 保持视频的纵横比 */
+}
