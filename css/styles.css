@@ -87,6 +87,12 @@ body {
   box-sizing: border-box;
 }
 
+    /* 设置所有链接的颜色 */
+    a {
+      color: rgb(158, 158, 158); /* 设置链接的颜色 */
+      text-decoration: none; /* 移除下划线 */
+    }
+
 /* 合并内容5和内容6 */
 .container-merged {
   flex: 1 1 66.66%; /* 占据两列 */
