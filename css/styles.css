@@ -137,6 +137,15 @@ body {
 .right-nav {
   right: 0;
 }
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  width: 50%;
+}
+
 /* 小屏幕下的响应式设置 */
 @media (max-width: 768px) {
   .parent-container {
