@@ -1,7 +1,7 @@
 /* 英文字体 */
 @font-face {
   font-family: 'Trap-Regular';
-  src: url('../assets/fonts/Trap-Regular.woff') format('woff');
+  src: url('/assets/fonts/Trap-Regular.woff') format('woff');
   font-display: swap; /* 更好的字体加载体验 */
   unicode-range: U+0000-007F, U+0080-00FF; /* 英文字母和基本符号范围 */
 }
@@ -9,7 +9,7 @@
 /* 中文字体 */
 @font-face {
   font-family: 'Plix-Regular';
-  src: url('../assets/fonts/Plix-Regular.otf') format('opentype');
+  src: url('/assets/fonts/Plix-Regular.otf') format('opentype');
   font-display: swap; /* 更好的字体加载体验 */
   unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF;/* 中文字符和部分标点范围 */
 }
@@ -40,6 +40,7 @@ body {
   font-size: clamp(25px, 3vw, 6ch); /* 响应式字体大小 */
   letter-spacing: 0.5px;
   line-height: 1.1;
+  letter-spacing: 0.01px; /* 设置英文内容的字间距 */
 }
 
 /* 针对中文字体的样式 */
@@ -138,12 +139,18 @@ body {
   right: 0;
 }
 
+/* about分两列 */
 .content-container {
   display: flex;
   justify-content: space-between;
 }
 .content {
   width: 50%;
+}
+
+/* info分两列 */
+.content1 {
+  width: 100%;
 }
 
 /* 小屏幕下的响应式设置 */
