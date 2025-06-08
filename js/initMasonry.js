@@ -33,3 +33,18 @@ window.addEventListener('resize', () => {
 });
 
 document.addEventListener('DOMContentLoaded', initMasonry);
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.querySelector('#masonry-grid');
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true
+      });
+    });
+  });
+  
