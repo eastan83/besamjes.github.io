@@ -1,152 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema4d</title>
-    <link rel="stylesheet" href="/css/style.css"> <!-- 引用外部样式文件 -->
-    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon"> <!-- 添加favicon -->
+  <meta charset="UTF-8">
+  <title>Graphic</title>
+  <link rel="stylesheet" href="css/pic_style.css">
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />    <!-- 添加favicon -->
 
-    <!-- 引入tailwindcss、masonry 实现瀑布流 -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/initMasonry.js"></script>
+  <!-- 引入 Masonry.js CDN -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  
 </head>
+
 <body>
-    <!-- 公共部分将加载到这里 -->
-    <div id="common-header"></div>
+    <div id="header"></div>
+  <div class="grid">
+    <div class="grid-sizer"></div>
 
-     <!-- masonry 瀑布流 -->
-    <div id="masonry-grid">
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2025.04.12.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2025.04.12</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2025.01.25.webp" class="w-full object-cover" />
-            <p class="text-xs md:text-xl py-1">2025.01.25</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2024.01.13 (2).webp" class="w-full object-cover" />
-            <p class="text-xs md:text-xl py-1">2024.01.13</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2024.01.13 (1).webp" class="w-full object-cover" />
-            <p class="text-xs md:text-xl py-1">2024.01.13</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <video controls loop controlsList="nodownload" class="w-full object-cover">
-                <source src="images/C4D/2022.12.04.mp4" type="video/mp4">
-                您的浏览器不支持 HTML5 视频标签。
-            </video>
-            <p class="text-xs md:text-xl py-1">2022.12.04</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <video controls loop controlsList="nodownload" class="w-full object-cover">
-                <source src="images/C4D/2022.11.27.mp4" type="video/mp4">
-                您的浏览器不支持 HTML5 视频标签。
-            </video>
-            <p class="text-xs md:text-xl py-1">2022.11.27</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2021.10.15.webp" class="w-full object-cover" />
-            <p class="text-xs md:text-xl py-1">2021.10.15</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2021.10.13.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2021.10.13</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2021.10.11.webp" class="w-full object-cover" />
-            <p class="text-xs md:text-xl py-1">2021.10.11</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2021.09.04.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2021.09.04</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2021.08.14.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2021.08.14</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2021.07.30.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2021.07.30</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2021.07.24.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2021.07.24</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <div class="w-full object-cover">
-                <video controls loop controlsList="nodownload">
-                    <source src="images/C4D/2021.04.06.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频标签。
-                </video>
-            </div>
-            <p class="text-xs md:text-xl py-1">2021.04.06</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2019.10.26.webp" class="w-full object-cover" />
-            <p class="text-xs md:text-xl py-1">2019.10.26</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2019.06.09.webp" class="w-full object-cover"/>
-            <p class="text-xs md:text-xl py-1">2019.06.09</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2019.06.01.webp" class="w-full object-cover"/>
-            <p class="text-xs md:text-xl py-1">2019.06.01</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2019.04.12.webp" class="w-full object-cover"/>
-            <p class="text-xs md:text-xl py-1">2019.04.12</p>
-        </div>
-        <div class="grid-item p-2 w-full md:w-1/2 lg:w-1/3">
-            <img src="images/C4D/2019.03.06.webp" class="w-full object-cover"/>
-            <p class="text-xs md:text-xl py-1">2019.03.06</p>
-        </div>
-    </div> 
+    <!-- 示例图片和视频 -->
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2025.04.12.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2025.04.12.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2025.01.25.webp">
+         <img src="images/C4D/2025.01.25.webp">
+      </a>
+    </div>
+    
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2024.01.13 (2).webp">
+         <img src="images/C4D/2024.01.13 (2).webp">
+      </a>
+    </div>
+    
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2024.01.13 (1).webp">
+         <img src="images/C4D/2024.01.13 (1).webp">
+      </a>
+    </div>
+    
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2022.12.04.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2022.12.04.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2022.11.27.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2022.11.27.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.10.15.webp">
+         <img src="images/C4D/2021.10.15.webp">
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.10.13.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2021.10.13.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.10.11.webp">
+         <img src="images/C4D/2021.10.11.webp">
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.09.04.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2021.09.04.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.08.14.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2021.08.14.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.07.30.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2021.07.30.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.07.24.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2021.07.24.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 视频 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2021.04.06.mp4">
+        <video autoplay loop muted>
+          <source src="images/C4D/2021.04.06.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2019.10.26.webp">
+         <img src="images/C4D/2019.10.26.webp">
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2019.06.09.webp">
+         <img src="images/C4D/2019.06.09.webp">
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2019.06.01.webp">
+         <img src="images/C4D/2019.06.01.webp">
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2019.04.12.webp">
+         <img src="images/C4D/2019.04.12.webp">
+      </a>
+    </div>
+
+    <!-- 图片 --><div class="grid-item">
+      <a data-fancybox="gallery" href="images/C4D/2019.03.06.webp">
+         <img src="images/C4D/2019.03.06.webp">
+      </a>
+    </div>
+
+  </div>
+
+  <script src="js/pic_script.js"></script>
+    <script>
+    // 动态加载 header.html
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
 </body>
-
-<script>
-  // 动态加载 header.html 内容
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('common-header').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading header:', error));
-
-</script>
 </html>

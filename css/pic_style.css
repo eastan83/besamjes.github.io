@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font-family: sans-serif;
+}
+
+.grid {
+  margin: 0 16px;   /* 两边留点间距，避免贴边太死板，可以改成 0 */
+}
+
+.grid-sizer,
+.grid-item {
+  width: calc(20% - 16px); /* 5列 */
+}
+
+@media (max-width: 1400px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(25% - 16px); /* 4列 */
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(33.33% - 16px); /* 3列 */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(50% - 16px); /* 2列 */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%; /* 手机竖屏 1列，不需要减 gutter */
+  }
+}
+
+.grid-item {
+  margin-bottom: 16px;
+}
+
+.grid-item img,
+.grid-item video {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #000; /* 视频没加载时有黑底 */
+}
