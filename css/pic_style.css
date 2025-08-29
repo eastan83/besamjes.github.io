@@ -6,7 +6,7 @@ body {
 }
 
 .grid {
-  margin: 0 16px;   /* 两边留点间距，避免贴边太死板，可以改成 0 */
+  margin: 0px 0px 0px 16px;   /* 两边留点间距，避免贴边太死板，可以改成 0 */
 }
 
 .grid-sizer,
@@ -28,17 +28,17 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .grid-sizer,
   .grid-item {
-    width: calc(50% - 16px); /* 2列 */
+    width: calc(50% - 16px); /* 平板和以下 → 2 列 */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .grid-sizer,
   .grid-item {
-    width: 100%; /* 手机竖屏 1列，不需要减 gutter */
+    width: 100%; /* 手机竖屏 → 1 列 */
   }
 }
 
