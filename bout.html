@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/header_style.css">
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />    <!-- 添加favicon -->
+
+</head>
+    <div id="header"></div>
+<body>
+
+  <div class="grid">
+    <div class="grid-sizer"></div>
+
+      <!-- 页面主体内容 -->
+      <div class="content-container">
+      <div class="content content-cn" lang="zh-CN">
+        💻我對平面設計、3D和標識比較感興趣。
+        <p>我常常探索一種既有藝術性，又有敘事性的方法，同時擴大我對將現實與虛擬世界區分開來的邊界的興趣。
+        <p>作為一名多學科的設計師，我遊走在非指導性的藝術項目和更傳統的企業項目之間。
+     </div>
+      <div class="content content-en" lang="en">
+        I am particularly interested in graphic design, 3D, and branding.
+        <p>I often explore approaches that are both artistic and narrative, while expanding my fascination with the boundaries that separate the real and virtual worlds.
+        <p>As a multidisciplinary designer, I navigate between non-directive artistic projects and more traditional corporate projects.🛑
+       </div>
+    </div>
+
+  </div>
+
+  <script src="js/pic_script.js"></script>
+    <script>
+    // 动态加载 header.html
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
