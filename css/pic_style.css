@@ -3,6 +3,7 @@ body {
   padding: 0;
   background: #f4f4f4;
   font-family: sans-serif;
+    font-display: swap; /* 提升首屏加载体验 */
 }
 
 .grid {
@@ -52,5 +53,5 @@ body {
   width: 100%;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  background: #000; /* 视频没加载时有黑底 */
+
 }

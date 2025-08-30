@@ -11,9 +11,10 @@
   color: #000000;
   padding: 0.4rem;
   text-align: left;
-  font-size: clamp(3rem, 5vw, 10ch); /* 响应式字体大小 */
+  font-size: 100px;
   line-height: 1.1;
   font-family: 'Trap-Medium', sans-serif; /* 使用引用的字体 */
+    font-display: swap; /* 提升首屏加载体验 */
 }
 
 .header a {

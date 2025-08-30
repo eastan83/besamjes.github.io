@@ -1,0 +1,32 @@
+/* 引用字体 */
+@font-face {
+  font-family: 'Trap-Medium';
+  src: url('../assets/fonts/Trap-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 顶部公共文本样式 */
+.header {
+  color: rgb(138, 138, 138);
+  padding: 0.4rem;
+  text-align: left;
+  font-size: 100px;
+  line-height: 1.1;
+  font-family: 'Trap-Medium', sans-serif; /* 使用引用的字体 */
+    font-display: swap; /* 提升首屏加载体验 */
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 10;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.header span {
+  color: inherit;
+}
